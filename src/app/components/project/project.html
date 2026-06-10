@@ -1,0 +1,20 @@
+<div class="project-card rounded-xl border border-gray-400 animate-on-scroll bg-white">
+    <div class="h-40 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center mb-1">
+        <span class="text-5xl">🖥️</span>
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-xl font-semibold">{{ name() }}</h3>
+        <p class="text-gray-400 mt-2 text-sm">{{ description() }}</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+            @for (tech of technologies(); track tech) {
+                <span class="text-xs px-2 py-1 rounded-full text-nowrap {{ getTechColor(tech) }}">{{ tech }}</span>
+            } @empty {
+                <span>There are no items</span>
+            }
+        </div>
+
+        <a href="#" class="text-blue-500 hover:text-blue-700 text-sm font-medium mt-6 inline-block">View More</a>
+    </div>
+
+</div>
