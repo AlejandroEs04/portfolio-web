@@ -1,0 +1,28 @@
+<div class="carousel relative overflow-hidden rounded-xl border border-gray-400 bg-black">
+  <div class="carousel-inner flex transition-transform duration-300 ease-in-out" [style.transform]="'translateX(-' + (currentIndex() * 100) + '%)'">
+    @for (image of images(); track image.id) {
+      <div class="carousel-slide min-w-full">
+        <img [src]="image.url" alt="Project image" class="w-full object-contain bg-black" />
+      </div>
+    }
+  </div>
+
+  @if (images().length > 1) {
+    <button (click)="prev()" class="carousel-btn carousel-btn-left absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors cursor-pointer">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button (click)="next()" class="carousel-btn carousel-btn-right absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors cursor-pointer">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+      @for (image of images(); track image.id; let i = $index) {
+        <button (click)="goTo(i)" class="w-2.5 h-2.5 rounded-full transition-colors cursor-pointer" [class]="i === currentIndex() ? 'bg-white' : 'bg-white/40 hover:bg-white/60'"></button>
+      }
+    </div>
+  }
+</div>

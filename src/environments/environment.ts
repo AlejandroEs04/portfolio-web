@@ -1,3 +1,3 @@
 export const environment = {
-  apiUrl: 'https://portfolio-api.acreead.com'
+  apiUrl: 'http://localhost:3000'
 };

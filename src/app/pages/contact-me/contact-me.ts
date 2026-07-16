@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ContactService } from '../../services/contact.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact-me',
@@ -11,6 +12,9 @@ import { ContactService } from '../../services/contact.service';
 export class ContactMe {
   private fb = inject(FormBuilder);
   private contactService = inject(ContactService);
+  private toastr = inject(ToastrService);
+
+  sending = false;
 
   contactForm = this.fb.nonNullable.group({
     name: ['', Validators.required],
@@ -20,13 +24,21 @@ export class ContactMe {
   });
 
   onSubmit() {
-    if (this.contactForm.invalid) return;
+    if (this.contactForm.invalid) {
+      this.toastr.error('Please fill all the fields', 'Error')
+      return;
+    }
+    this.sending = true;
     this.contactService.sendMessage(this.contactForm.getRawValue()).subscribe({
       next: () => {
         this.contactForm.reset();
-        console.log('Message sent successfully');
+        this.toastr.success('Message sended successfully', 'Sended');
+        this.sending = false;
       },
-      error: (err) => console.error('Failed to send message', err),
+      error: () => {
+        this.toastr.error('An error occured. Try again.', 'Error');
+        this.sending = false;
+      },
     });
   }
 }
