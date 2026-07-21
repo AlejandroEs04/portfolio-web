@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import { ScrollReveal } from '../../directives/scroll-reveal';
 
 @Component({
   selector: 'app-technology',
-  imports: [],
+  imports: [ScrollReveal],
   templateUrl: './technology.html',
   styleUrl: './technology.css',
 })

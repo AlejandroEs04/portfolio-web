@@ -3,12 +3,44 @@
 @import 'tailwindcss';
 @import 'ngx-toastr/toastr';
 
+@theme {
+  --color-ink-950: #0a0a0f;
+  --color-ink-900: #121218;
+  --color-ink-850: #17171f;
+  --color-ink-800: #1e1e28;
+  --color-ink-700: #2a2a37;
+  --color-ink-600: #3a3a4a;
+
+  --color-mxpink-300: #73C2FB;
+  --color-mxpink-400: #73C2FB;
+  --color-mxpink-500: #73C2FB;
+  --color-mxpink-600: #73C2FB;
+
+  --color-mxviolet-300: #73C2FB;
+  --color-mxviolet-400: #73C2FB;
+  --color-mxviolet-500: #73C2FB;
+  --color-mxviolet-600: #73C2FB;
+
+  --color-mxteal-300: #73C2FB;
+  --color-mxteal-400: #73C2FB;
+  --color-mxteal-500: #73C2FB;
+  --color-mxteal-600: #73C2FB;
+
+  --color-mxgold-400: #ffc266;
+  --color-mxgold-500: #f5a623;
+}
+
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html, body {
+  color: #e4e4e7;
 }
 
 .hero-gradient {
-  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(228, 0, 124, 0.16) 0%, transparent 70%);
 }
 
 .floating-shapes {
@@ -21,13 +53,13 @@ html {
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.3;
+  opacity: 0.35;
 }
 
 .shape-1 {
   width: 300px;
   height: 300px;
-  background: #3b82f6;
+  background: #e4007c;
   top: 10%;
   left: -5%;
   animation: float 8s ease-in-out infinite;
@@ -36,7 +68,7 @@ html {
 .shape-2 {
   width: 200px;
   height: 200px;
-  background: #7c90c9;
+  background: #0ea89a;
   bottom: 20%;
   right: -3%;
   animation: float 10s ease-in-out infinite reverse;
@@ -45,7 +77,7 @@ html {
 .shape-3 {
   width: 150px;
   height: 150px;
-  background: #21406e;
+  background: #f5a623;
   top: 50%;
   left: 50%;
   animation: float 12s ease-in-out infinite 2s;
@@ -89,4 +121,28 @@ html {
 .animate-fade-in-delay {
   opacity: 0;
   animation: fadeIn 0.8s ease-out 0.6s forwards;
+}
+
+/* Scroll-triggered reveal, driven by the appScrollReveal directive toggling .revealed
+   when the element enters the viewport (see src/app/directives/scroll-reveal.ts). */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animate-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape, .animate-fade-in, .animate-slide-up,
+  .animate-slide-up-delay, .animate-slide-up-delay-2,
+  .animate-fade-in-delay, .animate-on-scroll {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

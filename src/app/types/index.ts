@@ -32,3 +32,31 @@ export type Project = {
     images: Image[];
     projectTechnologies: ProjectTechnology[];
 }
+
+export type OfferingCategory = 'development' | 'engineering';
+
+export type Offering = {
+    id: number;
+    category: OfferingCategory;
+    title: string;
+    description: string;
+    skills: string[];
+    isActive: boolean;
+}
+
+export type ExperienceItem = {
+    id: number;
+    role: string;
+    client: string;
+    period: string;
+    summary: string;
+    highlights?: string[];
+    isActive: boolean;
+}
+
+export type Client = {
+    id: number;
+    name: string;
+    industry?: string;
+    isActive: boolean;
+}

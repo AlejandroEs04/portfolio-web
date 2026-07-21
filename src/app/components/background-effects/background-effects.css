@@ -1,0 +1,77 @@
+.bg-effects {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -50;
+  pointer-events: none;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.25;
+  will-change: transform;
+}
+
+.bg-ribbon {
+  position: absolute;
+  height: 140px;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.2;
+  will-change: transform;
+}
+
+.bg-blob-1 {
+  width: 420px;
+  height: 420px;
+  top: -12%;
+  left: -8%;
+  background: #960018;
+}
+
+.bg-blob-2 {
+  width: 320px;
+  height: 320px;
+  top: 22%;
+  right: -8%;
+  background: #a324c9;
+}
+
+.bg-blob-3 {
+  width: 300px;
+  height: 300px;
+  top: 62%;
+  right: 6%;
+  background: #f5a623;
+  opacity: 0.18;
+}
+
+.bg-blob-4 {
+  width: 380px;
+  height: 380px;
+  top: 88%;
+  left: -10%;
+  background: #73C2FB;
+}
+
+.bg-ribbon-1 {
+  width: 0;
+  top: 42%;
+  left: 6%;
+  background: linear-gradient(90deg, #e4007c, #a324c9);
+}
+
+.bg-ribbon-2 {
+  width: 620px;
+  top: 105%;
+  right: -6%;
+  background: linear-gradient(90deg, #a324c9, #e4007c);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-effects {
+    display: none;
+  }
+}

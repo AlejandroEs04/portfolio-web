@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import { ScrollReveal } from '../../directives/scroll-reveal';
 
 @Component({
   selector: 'app-project',
-  imports: [],
+  imports: [ScrollReveal],
   templateUrl: './project.html',
   styleUrl: './project.css',
 })
