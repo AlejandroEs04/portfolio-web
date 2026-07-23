@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 @import 'tailwindcss';
 @import 'ngx-toastr/toastr';
@@ -12,19 +13,19 @@
   --color-ink-600: #3a3a4a;
 
   --color-mxpink-300: #73C2FB;
-  --color-mxpink-400: #73C2FB;
-  --color-mxpink-500: #73C2FB;
-  --color-mxpink-600: #73C2FB;
+  --color-mxpink-400: #65BDFC;
+  --color-mxpink-500: #50B3FA;
+  --color-mxpink-600: #1588D6;
 
   --color-mxviolet-300: #73C2FB;
-  --color-mxviolet-400: #73C2FB;
-  --color-mxviolet-500: #73C2FB;
-  --color-mxviolet-600: #73C2FB;
+  --color-mxviolet-400: #65BDFC;
+  --color-mxviolet-500: #50B3FA;
+  --color-mxviolet-600: #1588D6;
 
   --color-mxteal-300: #73C2FB;
-  --color-mxteal-400: #73C2FB;
-  --color-mxteal-500: #73C2FB;
-  --color-mxteal-600: #73C2FB;
+  --color-mxteal-400: #65BDFC;
+  --color-mxteal-500: #50B3FA;
+  --color-mxteal-600: #1588D6;
 
   --color-mxgold-400: #ffc266;
   --color-mxgold-500: #f5a623;
@@ -37,6 +38,10 @@ html {
 
 html, body {
   color: #e4e4e7;
+}
+
+.acreead-font {
+  font-family: "Outfit", sans-serif;
 }
 
 .hero-gradient {
@@ -59,7 +64,7 @@ html, body {
 .shape-1 {
   width: 300px;
   height: 300px;
-  background: #e4007c;
+  background: #0b4c7a;
   top: 10%;
   left: -5%;
   animation: float 8s ease-in-out infinite;

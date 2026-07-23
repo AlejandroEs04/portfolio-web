@@ -1,0 +1,9 @@
+
+
+.acreead-logo {
+    font-size: 1.5rem;
+    transition: all ease-in-out 0.3s;
+}
+.acreead-logo:hover {
+    color: #73C2FB;
+}

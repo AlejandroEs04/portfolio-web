@@ -5,7 +5,7 @@
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-  border-color: rgba(228, 0, 124, 0.35);
+  border-color: rgba(117, 236, 230, 0.808);
 }
 
 @media (prefers-reduced-motion: reduce) {

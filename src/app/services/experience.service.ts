@@ -11,9 +11,9 @@ const EXPERIENCE: ExperienceItem[] = [
         id: 1,
         role: 'Freelance Full-Stack Developer',
         client: 'Independent / Multiple Clients',
-        period: '2022 — Present',
-        summary: 'Designing and building web, desktop and mobile applications for clients across different industries, from architecture through deployment.',
-        highlights: ['Angular, React & Next.js frontends', 'NestJS and .NET APIs', 'PostgreSQL, SQL Server & MongoDB'],
+        period: '2026',
+        summary: 'Designing and building web and mobile application for clients offering products and services, mobile Platform enabling digital sales of products and services management and stock tracking',
+        highlights: ['React', 'React Native', 'NestJS', 'PostgreSQL'],
         isActive: true,
     },
     {
@@ -23,7 +23,7 @@ const EXPERIENCE: ExperienceItem[] = [
         period: '2022 — Present',
         summary: 'Planning and maintaining cloud and on-prem infrastructure, including networking, servers and cloud deployments.',
         highlights: ['AWS infrastructure & deployments', 'Cisco network configuration', 'Server administration & monitoring'],
-        isActive: true,
+        isActive: false,
     },
     {
         id: 3,

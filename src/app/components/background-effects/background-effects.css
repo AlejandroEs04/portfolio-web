@@ -28,7 +28,7 @@
   height: 420px;
   top: -12%;
   left: -8%;
-  background: #960018;
+  background: #73C2FB;
 }
 
 .bg-blob-2 {
@@ -36,7 +36,7 @@
   height: 320px;
   top: 22%;
   right: -8%;
-  background: #a324c9;
+  background: #73C2FB;
 }
 
 .bg-blob-3 {
@@ -44,7 +44,7 @@
   height: 300px;
   top: 62%;
   right: 6%;
-  background: #f5a623;
+  background: #73C2FB;
   opacity: 0.18;
 }
 
@@ -60,14 +60,14 @@
   width: 0;
   top: 42%;
   left: 6%;
-  background: linear-gradient(90deg, #e4007c, #a324c9);
+  background: linear-gradient(90deg, #73C2FB, #36a2f0);
 }
 
 .bg-ribbon-2 {
   width: 620px;
   top: 105%;
   right: -6%;
-  background: linear-gradient(90deg, #a324c9, #e4007c);
+  background: linear-gradient(90deg, #73C2FB, #0b62a0);
 }
 
 @media (prefers-reduced-motion: reduce) {
